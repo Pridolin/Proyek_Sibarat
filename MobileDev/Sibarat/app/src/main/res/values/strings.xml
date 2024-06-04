@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Sibarat</string>
+    <string name="bg1">background 1</string>
+    <string name="bg2">background 2</string>
+    <string name="name_app">SIBARAT</string>
+    <string name="bg_app">Background App</string>
+    <string name="subtitle_app">Deteksi Bahasa Isyarat</string>
+    <string name="scan">Scan Foto</string>
+    <string name="kamus">Kamus</string>
+    <string name="done">Selesai</string>
+    <string name="result">Hasil Kata :</string>
+    <string name="desc_scan">Scan Foto Button</string>
+    <string name="desc_gallery">Gallery Foto Button</string>
+    <string name="result_scan">ABCDE</string>
+    <string name="foto_hasil">Captured Photo</string>
+    <string name="reset">Reset</string>
+    <string name="hasil_scan_string">ABCDE</string>
+    <string name="foto_detail">Detail Foto Pustaka</string>
+    <string name="reset_button">reset button</string>
+    <string name="home_button">home button</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+
+    <string-array name="data_alphabet">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/a</item>
+        <item>@drawable/b</item>
+        <item>@drawable/c</item>
+        <item>@drawable/d</item>
+        <item>@drawable/e</item>
+        <item>@drawable/f</item>
+        <item>@drawable/g</item>
+        <item>@drawable/h</item>
+        <item>@drawable/i</item>
+        <item>@drawable/k</item>
+        <item>@drawable/l</item>
+        <item>@drawable/m</item>
+        <item>@drawable/n</item>
+        <item>@drawable/o</item>
+        <item>@drawable/p</item>
+        <item>@drawable/q</item>
+        <item>@drawable/r</item>
+        <item>@drawable/s</item>
+        <item>@drawable/t</item>
+        <item>@drawable/u</item>
+        <item>@drawable/v</item>
+        <item>@drawable/w</item>
+        <item>@drawable/x</item>
+        <item>@drawable/y</item>
+    </integer-array>
+
+</resources>

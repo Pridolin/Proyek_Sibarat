@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/bg_app"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_sibarat_dev_purple" />
+
+    <ImageView
+        android:id="@+id/iv_resultPhoto"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_above="@id/result"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="220dp"
+        android:contentDescription="@string/foto_hasil"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/result_scan"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_resultPhoto" />
+
+    <LinearLayout
+        android:id="@+id/layout_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result">
+
+        <ImageButton
+            android:id="@+id/gallery_button"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_shape"
+            android:contentDescription="@string/desc_gallery"
+            android:gravity="center"
+            android:src="@drawable/ic_galery" />
+
+        <ImageButton
+            android:id="@+id/cam_button"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_shape"
+            android:contentDescription="@string/desc_scan"
+            android:src="@drawable/ic_camera" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_camera">
+
+        <Button
+            android:id="@+id/btn_scan"
+            style="@style/ButtonGeneral"
+            android:layout_width="308dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_shape"
+            android:text="@string/scan"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_selesai"
+            style="@style/ButtonGeneral"
+            android:layout_width="308dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_shape"
+            android:text="@string/done"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:contentDescription="@string/reset"
+        android:src="@drawable/ic_close"
+        app:fabCustomSize="40dp"
+        app:layout_constraintEnd_toEndOf="@id/iv_resultPhoto"
+        app:layout_constraintTop_toTopOf="@id/iv_resultPhoto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
