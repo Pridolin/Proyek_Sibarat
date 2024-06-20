@@ -4,5 +4,5 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 ENV PORT 4136 
-ENV MODEL_URL='https://storage.googleapis.com/sibarat-c241-bucket/model-on-predict/model.json'
+ENV MODEL_URL='https://storage.googleapis.com/sibarat-c241-bucket/new-model-ari/model.json'
 CMD ["npm", "run", "start"]

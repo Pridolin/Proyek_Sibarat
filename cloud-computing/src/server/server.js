@@ -19,6 +19,12 @@ const InputError = require("../exceptions/InputError");
     const model = await loadModel();
     server.app.model = model;
 
+    // Middleware untuk log semua header
+    server.ext('onRequest', (request, h) => {
+        console.log("Received headers:", request.headers);
+        return h.continue;
+    });
+
     server.route(routes);
 
     server.ext("onPreResponse", function (request, h) {
@@ -27,7 +33,6 @@ const InputError = require("../exceptions/InputError");
         if (response instanceof InputError) {
             const newResponse = h.response({
                 status: "fail",
-                // message: `${response.message} Silakan gunakan foto lain.`,
                 message: "Terjadi kesalahan dalam melakukan prediksi",
             });
             newResponse.code(400);
@@ -39,7 +44,6 @@ const InputError = require("../exceptions/InputError");
                 status: "fail",
                 message: response.message,
             });
-            // response.statusCode;
             newResponse.code(413);
             return newResponse;
         }

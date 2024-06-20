@@ -1,67 +1,64 @@
+const InputError = require('../exceptions/InputError');
 const predictClassification = require("../services/inferenceService");
 const crypto = require("crypto");
 const storeData = require("../services/storeData");
 const getData = require("../services/getData");
 
 async function postPredictHandler(request, h) {
+    console.log("postPredictHandler called");
+
     const { image } = request.payload;
     const { model } = request.server.app;
-    const { sessionId } = request.headers;
+
+    console.log("Headers:", request.headers); // Log semua header yang diterima
 
     if (!image) {
+        console.error("Tidak ada file yang tersedia");
         throw new InputError('Tidak ada file yang tersedia');
+    } else {
+        console.log("Image received:", image);
     }
 
-    if (!sessionId) {
-        throw new InputError('Tidak ada ID sesi yang diberikan');
+    try {
+        console.log("Starting prediction");
+        const { label, suggestion } = await predictClassification(model, image);
+        console.log("Prediction successful");
+
+        const id = crypto.randomUUID();
+        const createdAt = new Date().toISOString();
+
+        const data = {
+            id: id,
+            result: label,
+            suggestion: suggestion,
+            createdAt: createdAt,
+        };
+
+        console.log("Storing data:", data);
+        await storeData(id, data);
+
+        const response = h.response({
+            status: "success",
+            message: "Model is predicted successfully",
+            data,
+        });
+        response.code(201);
+        return response;
+    } catch (error) {
+        console.error("Error in postPredictHandler:", error);
+        throw new InputError('Terjadi kesalahan dalam melakukan prediksi');
     }
-
-    const { label, suggestion } = await predictClassification(model, image);
-
-    const id = crypto.randomUUID();
-    const createdAt = new Date().toISOString();
-
-    const data = {
-        id: id,
-        result: label,
-        suggestion: suggestion,
-        createdAt: createdAt,
-    };
-
-    await storeData(sessionId, data);
-
-    const response = h.response({
-        status: "success",
-        message: "Model is predicted successfully",
-        data,
-    });
-    response.code(201);
-    return response;
 }
 
 async function getPredictHandler(request, h) {
-    const { sessionId } = request.params;
 
-    if (!sessionId) {
-        throw new InputError('Tidak ada ID sesi yang diberikan');
-    }
-
-    const data = await getData(sessionId);
-
-    if (!data) {
-        const response = h.response({
-            status: "fail",
-            message: "Tidak ada data yang ditemukan untuk sesi ini",
-        });
-        response.code(404);
-        return response;
-    }
+    const data = await getData("\(default\)");
 
     const response = h.response({
         status: "success",
         data,
     });
-    response.code(200);
+    response.code(200)
     return response;
 }
 

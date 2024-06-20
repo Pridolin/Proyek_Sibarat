@@ -5,48 +5,55 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailDictionaryActivity">
+    tools:context=".activity.dictionary.DetailDictionaryActivity">
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/bg_app"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background_sibarat_dev_purple" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/background"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/bg_app"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/background_sibarat_dev_purple" />
-    </ScrollView>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imgPhoto"
-        android:layout_width="350dp"
-        android:layout_height="450dp"
-        android:layout_marginTop="36dp"
-        android:contentDescription="@string/foto_detail"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+            <ImageView
+                android:id="@+id/imgPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/foto_detail"
+                android:scaleType="centerInside"
+                tools:src="@drawable/ic_image_placeholder" />
 
-    <TextView
-        android:id="@+id/tv_alphabet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="@string/result_scan"
-        android:textFontWeight="700"
-        android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgPhoto" />
+            <TextView
+                android:id="@+id/tv_alphabet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/result_scan"
+                android:textFontWeight="700"
+                android:textSize="72sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

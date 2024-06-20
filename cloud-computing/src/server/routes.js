@@ -18,7 +18,7 @@ const routes = [
         },
     },
     {
-        path: "/predict/{sessionId}",
+        path: "/predict/history",
         method: "GET",
         handler: getPredictHandler,
     },

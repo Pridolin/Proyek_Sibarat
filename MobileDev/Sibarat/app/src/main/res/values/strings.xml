@@ -8,7 +8,7 @@
     <string name="scan">Scan Foto</string>
     <string name="kamus">Kamus</string>
     <string name="done">Selesai</string>
-    <string name="result">Hasil Kata :</string>
+    <string name="result">Hasil Kata:</string>
     <string name="desc_scan">Scan Foto Button</string>
     <string name="desc_gallery">Gallery Foto Button</string>
     <string name="result_scan">ABCDE</string>
@@ -20,6 +20,7 @@
     <string name="home_button">home button</string>
     <string name="list">List</string>
     <string name="grid">Grid</string>
+    <string name="logo">Logo</string>
 
     <string-array name="data_alphabet">
         <item>A</item>
