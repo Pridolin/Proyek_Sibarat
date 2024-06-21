@@ -16,6 +16,7 @@ As beginners, it can be hard to start learning sign language. So how can we help
 MD Repo: https://github.com/raziqaizza/Sibarat
 
 Tools:
+
 Integrated Development Environment (IDE):
 - Android Studio: Android app development.
 - Visual Studio Code : for devise files like  source codes  in general
@@ -30,7 +31,7 @@ Machine Learning and AI Libraries:
 - TensorFlow : for implementing AI algorithms and models for sign language recognition and translation.
 
 Cloud Computing Services:
-Google Cloud Platform (GCP): for cloud infrastructure, storage, and machine learning resources. For infrastructure, GCP uses services like Cloud Run and Compute Engine. Cloud Run allows you to run applications without managing servers, while Compute Engine provides customizable virtual machines. For storage, GCP uses Google Cloud Storage, which offers scalable and secure object storage. GCP also provides a range of tools and services for machine learning, including TensorFlow
+- Google Cloud Platform (GCP): for cloud infrastructure, storage, and machine learning resources. For infrastructure, GCP uses services like Cloud Run and Compute Engine. Cloud Run allows you to run applications without managing servers, while Compute Engine provides customizable virtual machines. For storage, GCP uses Google Cloud Storage, which offers scalable and secure object storage. GCP also provides a range of tools and services for machine learning, including TensorFlow
 
 Mobile App Development Libraries:
 - Retrofit: API management in android
@@ -39,7 +40,7 @@ Mobile App Development Libraries:
 - TensorFlow Lite: Import machine learning into android.
 
 Image Recognition and Text-to-Image APIs:
-Google Cloud Image-to-Text and Text-to-Image APIs, or similar alternatives: for integrating image and text features.
+- Google Cloud Image-to-Text and Text-to-Image APIs, or similar alternatives: for integrating image and text features.
 
 Image Processing Libraries:
 - OpenCV: for image processing and analysis.
