@@ -1,8 +1,8 @@
-Bangkit Academy 2024 Capstone Project
+**Bangkit Academy 2024 Capstone Project**
 
-Team: C241-PS360 
+**Team: C241-PS360** 
 
-Members:
+**Members:**
 1. (ML) M239D4KY1382 – Pridolin Bato – Duta Wacana Christian University
 2. (ML) M006D4KY1712 – Alfreiza Bariq – Brawijaya University
 3. (ML) M012D4KY2905 – Putu Michael Jehian Theo – Telkom University
@@ -15,7 +15,9 @@ As beginners, it can be hard to start learning sign language. So how can we help
 
 MD Repo: https://github.com/raziqaizza/Sibarat
 
-Tools:
+
+**Tools:**
+
 Integrated Development Environment (IDE):
 - Android Studio: Android app development.
 - Visual Studio Code : for devise files like  source codes  in general
