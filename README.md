@@ -16,7 +16,6 @@ As beginners, it can be hard to start learning sign language. So how can we help
 MD Repo: https://github.com/raziqaizza/Sibarat
 
 Tools:
-
 Integrated Development Environment (IDE):
 - Android Studio: Android app development.
 - Visual Studio Code : for devise files like  source codes  in general
