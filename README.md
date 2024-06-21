@@ -11,7 +11,6 @@ Members:
 6. (MD) A006D4KY3642– Raziqa Izza Langundi – Brawijaya University
 7. (MD) A573D4KY4076– Muhammad Al Fajar – Lancang Kuning University
 
-As beginners, it can be hard to start learning sign language. So how can we help the newcomers in learning sign language? We want to create an application that helps newcomers and people that are interested in sign language in general with an app that translates pictures of hand signs into alphabets. SIBARAT is an Android application that can translate sign language into alphabets using the American Sign Language as its base. The app uses a machine learning model to detect specific hand sign using MNIST Dataset with CNN. 
-
+As beginners, it can be hard to start learning sign language. So how can we help the newcomers in learning sign language? We want to create an application that helps newcomers and people that are interested in sign language in general with an app that translates pictures of hand signs into alphabets. SIBARAT is an Android application that can translate sign language into alphabets using the American Sign Language as its base. The app uses a machine learning model to detect specific hand sign using MNIST Dataset with CNN. The tools used for the CC are Node.js, Hapijs, Tensorflow js, and Docker. Resources used are Cloud Storage, Cloud Run, Firestore, adn Artifact Registry. The app is build on Kotlin using Android Studio using MVVM as the architecture.
 
 MD Repo: https://github.com/raziqaizza/Sibarat
